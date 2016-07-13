@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="SliderDemo">
+<head>
+	<title>WoW.....:D</title>
+	<link rel="stylesheet" type="text/css" href="slider.css">
+	<style type="text/css">
+		.my-div {
+			width: 280px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+ <div></div>
+ <div class="my-div" ng-controller="sliderCtrl">
+ 	<div rg-slider min="0" max="60"></div>
+ 	<div style="float:left">min :- {{min}}</div>
+ 	<div style="float:right">max :- {{max}}</div>
+ </div>
+ <script type="text/javascript" src="angular.js"></script>
+ <script type="text/javascript" src="slider.js"></script>
+ <script type="text/javascript">
+ 	var app = angular.module('SliderDemo', ['rgSlider']);
+ 	app.controller('sliderCtrl',['$scope', function($scope) {
+ 		$scope.min = 0;
+ 		$scope.max = 60;
+ 	}])
+
+ </script>
+</body>
+</html>
